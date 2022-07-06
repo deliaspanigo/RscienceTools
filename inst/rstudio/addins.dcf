@@ -1,0 +1,4 @@
+Name: RsienceTools
+Description: My first example for addin.
+Binding: clockAddin
+Interactive: true
