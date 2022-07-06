@@ -7,6 +7,8 @@
 #' @examples
 #' namel2(names = colnames(mtcars))
 #' namel2(names = colnames(mtcars), vec = colnames(mtcars))
+#' @import shiny
+#' @import miniUI
 #' @export
 #'
 
