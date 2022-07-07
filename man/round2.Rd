@@ -2,20 +2,27 @@
 % Please edit documentation in R/round2.R
 \name{round2}
 \alias{round2}
-\title{Redondea como lo hacemos en la primaria}
+\title{Redondeo Humano}
 \usage{
-round2(x, n)
+round2(x, decimals = 4)
 }
 \arguments{
-\item{x}{es un vector que detalla los nombres a utilizar.}
+\item{x}{es un vector numerico, una matriz numerica o un data.frame numerico.}
+
+\item{decimals}{es un vector numerico de un unico elemento que indica la cantidad de decimales a utilizar.}
 }
 \description{
-Esta es una funcion de ejemplo para multiplicar un valor o vector por dos.
+La función \code{round2()} es una funcion que realiza la tarea de redondear numeros
+de la manera en que estamos acostumbrados a realizarlo. Es una opcion diferente al redondeo que ofrece
+la funcion round() del paquete base de R.
 }
 \details{
-Esta funcion es parte del tutorial para hacer paquetes del curso de Metodos Multivariados 2017
-en el ITAM. La funcion recibe un elemento que puede ser un numero o un vector numerico y lo devuelve
-multiplicado por dos. La documentacion de ayuda es generada usando roxygen2.
+Realiza el redondeo de acuerdo a la cantidad de dígitos y los valores.
+Si \code{x > 0} y el digito en la posicion decimal a redondear es mayor o igual a 5, redondea hacia
+el valor positivo siguiente.
+Si \code{x < 0} y el digito en la posicion decimal a redondear es mayor o igual a 5, redondea hacia
+Si \code{x < 0}el valor negativo anterior
+Si Si \code{x == 0}, se redondea a 0.
 }
 \examples{
 round(0.5)
