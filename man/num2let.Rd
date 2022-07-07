@@ -7,15 +7,18 @@
 num2let(n, lets = LETTERS)
 }
 \arguments{
-\item{n}{es un vector que detalla los nombres a utilizar.}
+\item{n}{es un vector numerico con valores mayores o iguales a 1.}
+
+\item{lets}{es un vector que detalla las letras del abecedario en mayusculas.}
 }
 \description{
-Esta es una funcion de ejemplo para multiplicar un valor o vectorpor dos.
+La función \code{namel2()} realiza la conversion de numero a letra o combinacion de letras
+correspondientes al abecedario latino.
 }
 \details{
-Esta funcion es parte del tutorial para hacer paquetes del curso de Metodos Multivariados 2017
-en el ITAM. La funcion recibe un elemento que puede ser un numero o un vector numerico y lo devuelve
-multiplicado por dos. La documentacion de ayuda es generada usando roxygen2.
+El vector \code{n} solo soporta valores mayores o igual a 1 como parte del vector numerico.
+Ante valores NULL, NA, valores numericos 0 o negativos, la funcion dara un mensaje de error.
+El vector \code{lets} no soporta valores \code{NA} o NULL entre sus elementos.
 }
 \examples{
 num2let(1)

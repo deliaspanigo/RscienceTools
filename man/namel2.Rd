@@ -7,15 +7,22 @@
 namel2(names, vec = NA)
 }
 \arguments{
-\item{names}{es un vector que detalla los nombres a utilizar.}
+\item{names}{es un vector que detalla los nombres a asignar a la lista.}
+
+\item{vec}{es un vector que detalla el contenido minimo que tendra cada lista.
+Puede ser un vector de un solo elemento o un vector con un elemento para cada lista.
+El valor por defecto es NA.}
 }
 \description{
-Esta es una funcion de ejemplo para multiplicar un valor o vector por dos.
+La idea de la funcion \code{namel2()} es facilitar la creacion de listas, asignando un nombre a
+cada elemento de la lista y un contenido inicial.
+Si solo se detalla el vector \code{names} el contenido de las listas por defecto sera NA.
 }
 \details{
-Esta funcion es parte del tutorial para hacer paquetes del curso de Metodos Multivariados 2017
-en el ITAM. La funcion recibe un elemento  que puede ser un numero o un vector numerico y lo devuelve
-multiplicado por dos. La documentacion de ayuda es generada usando roxygen2.
+Internamente, genera una lista con los elementos del vector \code{vec}, y le asigna a la lista
+generada los nombres del vector \code{names}. El parametro \code{vec} por defecto es NA.
+Si se asigna un vector a \code{vec} este vector debe contener un elemento unico o tener
+la misma cantidad de elementos que \code{names}; en cualquier otor caso la funcion devuelve un aviso de error.
 }
 \examples{
 namel2(names = colnames(mtcars))
